@@ -1,3 +1,5 @@
+## code borrowed from: https://github.com/plan-x64/advent-of-code-2021/blob/main/advent/day6.py
+
 import sys
 
 def initial_population(input):
