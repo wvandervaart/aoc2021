@@ -1,4 +1,4 @@
-import math
+import datetime
 
 def getInput(path):
     input = []
@@ -64,11 +64,11 @@ def part2(data):
     for dat in data:
         points.append(opened(dat))
     points.sort()
-    middleIndex = math.ceil((len(points) - 1)/2)
-    return points[middleIndex]
+    return points[len(points) // 2]
 
 
 def main():
+    begin_time = datetime.datetime.now()
     data = getInput("input")
     char = []
     incomplete = []
@@ -78,6 +78,7 @@ def main():
             incomplete.append(unmatched(dat))
     print("P1:", part1(char))
     print("P2:", part2(incomplete))
+    print("runtime:", datetime.datetime.now() - begin_time)
 
 if __name__ == "__main__":
     main()

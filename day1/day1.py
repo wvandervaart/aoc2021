@@ -6,4 +6,4 @@ with open("list", "r") as a_file:
     if int(prev) < int(stripped_line):
       counter += 1
     prev = stripped_line
-  print(counter)
+  print(counter-1)

@@ -1,3 +1,4 @@
+import datetime
 def pt1(o):
     lines = []
     cords = []
@@ -117,8 +118,10 @@ def pt2(cords, o):
     print(basin_sizes[0] * basin_sizes[1] * basin_sizes[2])
 
 if __name__ == "__main__":
+    begin_time = datetime.datetime.now()
     o = [[int(char) for char in line.strip()] for line in open("input").readlines()]
-    print(f"Part 1:")
+    print("Part 1:")
     cords = pt1(o)
     print("Part 2:")
     pt2(cords, o)
+    print("runtime:", datetime.datetime.now() - begin_time)
